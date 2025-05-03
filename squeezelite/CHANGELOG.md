@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.0.3
+
+- Enable realtime to prevent lagging audio
+
 ## 1.0.2
 
 - Fix missing execute permission on service files
