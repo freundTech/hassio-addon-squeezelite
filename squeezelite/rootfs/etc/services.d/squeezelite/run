@@ -1,0 +1,33 @@
+#!/usr/bin/with-contenv bashio
+
+declare -a options
+declare player_name
+declare mac_address
+
+bashio::log.info 'Starting squeezelite daemon...'
+
+# Player Name
+bashio::config.require 'player_name'
+player_name="$(bashio::config 'player_name')"
+options+=(-n "$player_name")
+
+# MAC Address
+if bashio::config.has_value 'mac_address'; then
+    mac_address="$(bashio::config 'mac_address')"
+    bashio::log.debug "Using configured MAC address: $mac_address"
+elif [[ -f /data/mac_address ]]; then
+    mac_address="$(cat /data/mac_address)"
+    bashio::log.debug "Using previous MAC address: $mac_address"
+else
+    mac_address=$(od -txC -An -N6 /dev/random | xargs | tr ' ' :)
+    echo $mac_address > /data/mac_address
+    bashio::log.debug "Generating and saving random MAC address: $mac_address"
+fi
+options+=(-m "$mac_address")
+
+# Debug Mode
+if bashio::debug; then
+    options+=(-d all=debug)
+fi
+
+exec /usr/bin/squeezelite "${options[@]}"

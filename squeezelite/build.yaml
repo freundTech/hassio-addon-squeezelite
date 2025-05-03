@@ -1,0 +1,15 @@
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base:3.21"
+  amd64: "ghcr.io/home-assistant/amd64-base:3.21"
+  armhf: "ghcr.io/home-assistant/armhf-base:3.21"
+  armv7: "ghcr.io/home-assistant/armv7-base:3.21"
+  i386: "ghcr.io/home-assistant/i386-base:3.21"
+codenotary:
+  signer: adrian@freund.io
+  base_image: notary@home-assistant.io
+labels:
+  org.opencontainers.image.title: "Home Assistant Add-on: Squeezelite Player"
+  org.opencontainers.image.description: "Turn your Home Assistant into a Logitech Media Server player"
+  org.opencontainers.image.source: "https://github.com/freundTech/hassio-addon-squeezelite"
+  org.opencontainers.image.licenses: "GPL-3.0-or-later"
+  org.opencontainers.authors: "Adrian Freund"
