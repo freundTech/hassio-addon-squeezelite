@@ -1,6 +1,6 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: Squeezelite
 
-_Example add-on to use as a blueprint for new add-ons._
+_Turn your Home Assistant into a Squeezelite music player_
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]

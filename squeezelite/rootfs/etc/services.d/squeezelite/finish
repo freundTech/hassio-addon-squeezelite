@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bashio
+
+if [[ "${1}" -ne 0 ]]; then
+  bashio::log.warning "squeezelite crashed, halting add-on"
+  /run/s6/basedir/bin/halt
+fi
+
+bashio::log.info "squeezelite stoped, restarting..."

@@ -1,0 +1,8 @@
+configuration:
+  player_name:
+    name: Player Name
+    description: The name the squeezelite player advertises as
+  mac_address:
+    name: MAC Address
+    description: A unique identifier for the squeezelite device of the form AB:CD:EF:12:34:56
+ 
