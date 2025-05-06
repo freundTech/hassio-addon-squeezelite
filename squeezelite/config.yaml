@@ -1,7 +1,7 @@
 name: Squeezelite
-version: "1.0.3"
+version: "1.0.4"
 slug: squeezelite
-description: Turn your Home Assistant into a Logitech Media Server player
+description: Turn your Home Assistant into a Squeezelite media player
 url: "https://github.com/freundTech/hassio-addon-squeezelite/tree/main/squeezelite"
 image: "ghcr.io/freundtech/{arch}-addon-squeezelite"
 codenotary: adrian@freund.io
