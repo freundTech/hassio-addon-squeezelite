@@ -1,6 +1,6 @@
 # Home Assistant Add-on: Squeezelite
 
-_Turn your Home Assistant into a Squeezelite music player_
+_Turn your Home Assistant into a Squeezelite media player_
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]

@@ -15,7 +15,7 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-_Turn your Home Assistant into a Squeezelite music player_
+_Turn your Home Assistant into a Squeezelite media player_
 
 <!--
 
