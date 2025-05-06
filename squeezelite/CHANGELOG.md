@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.0.4
+
+- Update Squeezelite to version 2.0.1533
+
 ## 1.0.3
 
 - Enable realtime to prevent lagging audio
