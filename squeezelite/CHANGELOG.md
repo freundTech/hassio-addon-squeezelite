@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## dev
+## 1.0.5
 
 - Update base image to 3.23
 - Update Squeezelite to version 2.0.1556
