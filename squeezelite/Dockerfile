@@ -2,8 +2,8 @@ ARG BUILD_FROM
 
 FROM $BUILD_FROM as build
 
-# Version 2.0.1533
-ARG SQUEEZELITE_COMMIT=bb7ae0615f6e661c217a1c77fdff70122859c3c5
+# Version 2.0.1556
+ARG SQUEEZELITE_COMMIT=e70c19f79f76209b05806e022a9959c96d32697c
 
 RUN apk add build-base pulseaudio-dev flac-dev libvorbis-dev faad2-dev libmad-dev mpg123-dev
 RUN \

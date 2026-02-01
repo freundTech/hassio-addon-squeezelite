@@ -3,6 +3,7 @@
 ## dev
 
 - Update base image to 3.23
+- Update Squeezelite to version 2.0.1556
 
 ## 1.0.4
 
