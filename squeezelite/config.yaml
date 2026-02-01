@@ -5,11 +5,8 @@ description: Turn your Home Assistant into a Squeezelite media player
 url: "https://github.com/freundTech/hassio-addon-squeezelite/tree/main/squeezelite"
 image: "ghcr.io/freundtech/{arch}-addon-squeezelite"
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
-  - i386
 init: false
 audio: true
 realtime: true
