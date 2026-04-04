@@ -1,9 +1,9 @@
 name: Squeezelite
-version: "1.0.5"
+version: "1.0.6"
 slug: squeezelite
 description: Turn your Home Assistant into a Squeezelite media player
 url: "https://github.com/freundTech/hassio-apps-audio-receivers/tree/main/squeezelite"
-image: "ghcr.io/freundtech/{arch}-addon-squeezelite"
+image: "ghcr.io/freundtech/app-squeezelite"
 arch:
   - aarch64
   - amd64
