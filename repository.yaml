@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Squeezelite
-url: 'https://github.com/freundTech/hassio-addon-squeezelite'
+name: Audio Receivers
+url: 'https://github.com/freundTech/hassio-apps-audio-receivers'
 maintainer: Adrian Freund <adrian@freund.io>
