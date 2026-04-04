@@ -3,10 +3,6 @@
 ## unreleased
 
 - Rename from Add-on to App
-
-## 1.0.6
-
-- Rename from Add-on to App
 - Update build system
 
 ## 1.0.5
