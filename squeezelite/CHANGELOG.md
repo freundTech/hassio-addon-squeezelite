@@ -1,5 +1,14 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## unreleased
+
+- Rename from Add-on to App
+
+## 1.0.6
+
+- Rename from Add-on to App
+- Update build system
+
 ## 1.0.5
 
 - Update base image to 3.23

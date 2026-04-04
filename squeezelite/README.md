@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Squeezelite
+# Home Assistant App: Squeezelite
 
 _Turn your Home Assistant into a Squeezelite media player_
 
