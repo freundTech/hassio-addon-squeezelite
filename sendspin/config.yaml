@@ -1,0 +1,19 @@
+name: Sendspin
+version: "1.0.0"
+slug: sendspin
+description: Turn your Home Assistant into a Sendspin media player
+url: "https://github.com/freundTech/hassio-apps-audio-receivers/tree/main/sendspin"
+image: "ghcr.io/freundtech/app-sendspin"
+arch:
+  - aarch64
+  - amd64
+init: false
+audio: true
+realtime: true
+ports:
+  8928/tcp: 8928
+options:
+  player_name: "Home Assistant"
+schema:
+  player_name: "str"
+  player_id: "str?"

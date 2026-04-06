@@ -1,0 +1,8 @@
+configuration:
+  player_name:
+    name: Player Name
+    description: The name the sendspin player advertises as
+  player_id:
+    name: Player ID
+    description: A unique identifier for the sendspin player
+
