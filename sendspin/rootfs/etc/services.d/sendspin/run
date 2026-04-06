@@ -1,0 +1,28 @@
+#!/usr/bin/with-contenv bashio
+
+declare -a options
+declare player_name
+declare player_id
+
+bashio::log.info 'Starting sendspin daemon...'
+
+# Player Name
+bashio::config.require 'player_name'
+player_name="$(bashio::config 'player_name')"
+options+=(--name "$player_name")
+
+# Player ID
+if bashio::config.has_value 'player_id'; then
+    player_id="$(bashio::config 'player_id')"
+    bashio::log.debug "Using configured player id: $player_id"
+    options+=(--id "$player_id")
+fi
+
+# Debug Mode
+if bashio::debug; then
+    options+=(--log-level DEBUG)
+fi
+
+options+=(--disable-mpris)
+
+exec /usr/bin/sendspin daemon "${options[@]}"
