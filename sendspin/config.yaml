@@ -1,5 +1,5 @@
 name: Sendspin
-version: "1.0.0"
+version: "1.0.1"
 slug: sendspin
 description: Turn your Home Assistant into a Sendspin media player
 url: "https://github.com/freundTech/hassio-apps-audio-receivers/tree/main/sendspin"

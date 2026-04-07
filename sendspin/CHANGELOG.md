@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## unreleased
+## 1.0.1
 
 - Expose static delay option
 
