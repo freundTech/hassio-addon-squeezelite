@@ -3,6 +3,7 @@
 declare -a options
 declare player_name
 declare player_id
+declare static_delay_ms
 
 bashio::log.info 'Starting sendspin daemon...'
 
@@ -16,6 +17,13 @@ if bashio::config.has_value 'player_id'; then
     player_id="$(bashio::config 'player_id')"
     bashio::log.debug "Using configured player id: $player_id"
     options+=(--id "$player_id")
+fi
+
+# Static delay
+if bashio::config.has_value 'static_delay_ms'; then
+    static_delay_ms="$(bashio::config 'static_delay_ms')"
+    bashio::log.debug "Setting extra delay: ${static_delay_ms}ms"
+    options+=(--static-delay-ms "$static_delay_ms")
 fi
 
 # Debug Mode

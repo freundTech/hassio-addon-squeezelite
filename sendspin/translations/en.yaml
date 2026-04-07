@@ -5,4 +5,7 @@ configuration:
   player_id:
     name: Player ID
     description: A unique identifier for the sendspin player
+  static_delay_ms:
+    name: Static Delay (ms)
+    description: Extra playback delay in milliseconds applied after clock sync
 
