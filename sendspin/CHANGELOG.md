@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## unreleased
+## 1.0.2
 
 - Relax static_delay_ms configuration schema
 - Set manufacturer and product name
