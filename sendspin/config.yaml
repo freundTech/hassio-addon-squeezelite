@@ -17,4 +17,4 @@ options:
 schema:
   player_name: "str"
   player_id: "str?"
-  static_delay_ms: "int(0,)?"
+  static_delay_ms: "float?"
