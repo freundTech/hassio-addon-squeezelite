@@ -1,7 +1,7 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23
 
 FROM $BUILD_FROM AS build-base
-RUN apk add --no-cache python3 py3-setuptools uv
+RUN apk add --no-cache patch python3 py3-setuptools uv
 
 FROM build-base AS build-native
 RUN apk add --no-cache gcc python3-dev musl-dev
@@ -43,8 +43,7 @@ ARG AIOSENDSPIN_HASH=30c3f8fa2bf5f31056b13338b180bbd9bd17c17b5f729897ce310111d90
 
 
 COPY patches/aiosendspin/ /patches
-RUN apk add --no-cache patch && \
-    curl -sSLf https://github.com/sendspin/aiosendspin/archive/refs/tags/${AIOSENDSPIN_VERSION}.tar.gz -o aiosendspin.tar.gz && \
+RUN curl -sSLf https://github.com/sendspin/aiosendspin/archive/refs/tags/${AIOSENDSPIN_VERSION}.tar.gz -o aiosendspin.tar.gz && \
     echo "$AIOSENDSPIN_HASH aiosendspin.tar.gz" | sha256sum -c - && \
     tar -xzf aiosendspin.tar.gz && \
     cd "aiosendspin-$AIOSENDSPIN_VERSION/" && \
@@ -71,10 +70,12 @@ FROM build-native AS build-sendspin-cli
 ARG SENDSPIN_CLI_VERSION=5.9.0
 ARG SENDSPIN_CLI_HASH=0fec3c1de890374a1fa69f9164df507518da68d30652dfb271ab1d090b81c53b
 
+COPY patches/sendspin-cli/ /patches
 RUN curl -Lf https://github.com/sendspin/sendspin-cli/archive/refs/tags/${SENDSPIN_CLI_VERSION}.tar.gz -o sendspin-cli.tar.gz && \
     echo "$SENDSPIN_CLI_HASH sendspin-cli.tar.gz" | sha256sum -c - && \
     tar -xzf sendspin-cli.tar.gz && \
     cd "sendspin-cli-$SENDSPIN_CLI_VERSION/" && \
+    patch -p1 < /patches/0001-Set-manufacturer-and-product-name.patch && \
     sed -i 's/^version = "0.0.0"/version = "'"$SENDSPIN_CLI_VERSION"'"/' pyproject.toml && \
     SENDSPIN_REQUIRE_C_EXT=1 uv build --offline --no-build-isolation --wheel --out-dir=/wheels
 

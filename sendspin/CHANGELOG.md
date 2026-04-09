@@ -3,6 +3,7 @@
 ## unreleased
 
 - Relax static_delay_ms configuration schema
+- Set manufacturer and product name
 
 ## 1.0.1
 
