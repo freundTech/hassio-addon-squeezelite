@@ -1,4 +1,4 @@
-# Home Assistant Squeezelite app repository
+# Home Assistant audio receivers app repository
 
 
 [![Open your Home Assistant instance and show the add app repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/?repository_url=https%3A%2F%2Fgithub.com%2FfreundTech%2Fhassio-apps-audio-receivers)
