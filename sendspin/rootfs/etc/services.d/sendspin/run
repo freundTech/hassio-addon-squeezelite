@@ -32,5 +32,7 @@ if bashio::debug; then
 fi
 
 options+=(--disable-mpris)
+options+=(--manufacturer "Adrian Freund")
+options+=(--product-name "Home Assistant Sendspin App")
 
-exec /usr/bin/sendspin daemon "${options[@]}"
+exec /venv/bin/sendspin daemon "${options[@]}"
