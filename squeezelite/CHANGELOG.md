@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## unreleased
+## 1.0.7
 
 - Resolve build warnings
 - Update Squeezelite to version 2.0.1561
