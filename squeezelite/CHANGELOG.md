@@ -4,6 +4,7 @@
 
 - Resolve build warnings
 - Update Squeezelite to version 2.0.1561
+- Add hash verification to build
 
 ## 1.0.6
 
