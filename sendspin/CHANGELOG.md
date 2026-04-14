@@ -1,7 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## unreleased
-
+## 1.1.0
 - Update sendspin-cli to 6.0.0
 - Refactor container build
 - Resolve build warnings
