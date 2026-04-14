@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## unreleased
+
+- Update sendspin-cli to 6.0.0
+- Refactor container build
+
 ## 1.0.2
 
 - Relax static_delay_ms configuration schema
