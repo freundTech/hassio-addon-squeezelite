@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## unreleased
+
+- Resolve build warnings
+
 ## 1.0.6
 
 - Rename from Add-on to App

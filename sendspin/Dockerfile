@@ -56,8 +56,8 @@ RUN apk add --no-cache ffmpeg python3
 COPY rootfs /
 
 LABEL \
-    org.opencontainers.image.title: "Home Assistant Add-on: Sendspin Player" \
-    org.opencontainers.image.description: "Turn your Home Assistant into a Sendspin media player" \
+    org.opencontainers.image.title="Home Assistant Add-on: Sendspin Player" \
+    org.opencontainers.image.description="Turn your Home Assistant into a Sendspin media player" \
     org.opencontainers.image.source="https://github.com/freundTech/hassio-apps-audio-receivers" \
     org.opencontainers.image.licenses="Apache-2.0" \
-    org.opencontainers.authors: "Adrian Freund"
+    org.opencontainers.authors="Adrian Freund"

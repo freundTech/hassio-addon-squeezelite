@@ -1,5 +1,5 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23
-FROM $BUILD_FROM as build
+FROM $BUILD_FROM AS build
 
 # Version 2.0.1556
 ARG SQUEEZELITE_COMMIT=e70c19f79f76209b05806e022a9959c96d32697c
@@ -21,8 +21,8 @@ RUN apk add pulseaudio libflac libvorbis faad2 libmad mpg123
 COPY rootfs /
 
 LABEL \
-    org.opencontainers.image.title: "Home Assistant Add-on: Squeezelite Player" \
-    org.opencontainers.image.description: "Turn your Home Assistant into a Squeezelite media player" \
+    org.opencontainers.image.title="Home Assistant Add-on: Squeezelite Player" \
+    org.opencontainers.image.description="Turn your Home Assistant into a Squeezelite media player" \
     org.opencontainers.image.source="https://github.com/freundTech/hassio-apps-audio-receivers" \
     org.opencontainers.image.licenses="GPL-3.0-or-later" \
-    org.opencontainers.authors: "Adrian Freund"
+    org.opencontainers.authors="Adrian Freund"

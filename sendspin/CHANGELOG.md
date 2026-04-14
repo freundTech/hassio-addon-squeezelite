@@ -4,6 +4,7 @@
 
 - Update sendspin-cli to 6.0.0
 - Refactor container build
+- Resolve build warnings
 
 ## 1.0.2
 
