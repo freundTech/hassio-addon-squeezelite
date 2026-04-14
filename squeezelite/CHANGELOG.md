@@ -3,6 +3,7 @@
 ## unreleased
 
 - Resolve build warnings
+- Update Squeezelite to version 2.0.1561
 
 ## 1.0.6
 

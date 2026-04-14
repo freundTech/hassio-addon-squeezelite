@@ -1,8 +1,8 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23
 FROM $BUILD_FROM AS build
 
-# Version 2.0.1556
-ARG SQUEEZELITE_COMMIT=e70c19f79f76209b05806e022a9959c96d32697c
+# Version 2.0.1561
+ARG SQUEEZELITE_COMMIT=e977d1045f5f4c1a51ba0d66387f26fd19a2f42a
 
 RUN apk add build-base pulseaudio-dev flac-dev libvorbis-dev faad2-dev libmad-dev mpg123-dev
 RUN \
