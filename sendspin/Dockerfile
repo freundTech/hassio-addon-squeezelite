@@ -25,14 +25,13 @@ RUN --mount=type=cache,target=/etc/apk/cache \
 
 # sendspin-cli
 FROM build-base AS build-sendspin-cli
-ARG SENDSPIN_CLI_VERSION=6.0.0
-ARG SENDSPIN_CLI_HASH=fb0a303b641cbf138b2456f589e97b42ebc451ee338eff0f5e242ee5cd2ef5b8
+ARG SENDSPIN_CLI_VERSION=7.0.0
+ARG SENDSPIN_CLI_HASH=46e135fe5d5cf280078dc3c5284e1cc4402bf937228567766fe7252b39c0c712
 
 ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 ENV SENDSPIN_REQUIRE_C_EXT=1
 
-COPY patches/sendspin-cli/ /patches
 RUN --mount=type=cache,target=/etc/apk/cache \
     --mount=type=cache,target=/root/.cache/uv \
     apk add --no-cache gcc python3-dev musl-dev && \
@@ -40,7 +39,6 @@ RUN --mount=type=cache,target=/etc/apk/cache \
     echo "$SENDSPIN_CLI_HASH sendspin-cli.tar.gz" | sha256sum -c - && \
     tar -xzf sendspin-cli.tar.gz && \
     cd "sendspin-cli-$SENDSPIN_CLI_VERSION/" && \
-    patch -p1 < /patches/0001-Add-uv.lock-for-reproducible-builds-225.patch && \
     sed -i 's/^version = "0.0.0"/version = "'"$SENDSPIN_CLI_VERSION"'"/' pyproject.toml && \
     UV_PROJECT_ENVIRONMENT=/venv uv sync --frozen --no-dev --no-managed-python --no-editable --compile-bytecode --python=/usr/bin/python
 
