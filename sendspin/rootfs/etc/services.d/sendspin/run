@@ -4,8 +4,35 @@ declare -a options
 declare player_name
 declare player_id
 declare static_delay_ms
+declare current_version
+
+# Migrations
+current_version=$(bashio::addon.version)
+
+# Either first run or upgrading from <1.2.0
+if [[ ! -f /data/last_run_version ]]; then
+    # Migration sendspin-cli 6.0.0 -> 7.0.0
+    # static delay sign changed
+    declare new_static_delay_ms
+    if bashio::config.has_value 'static_delay_ms'; then
+        static_delay_ms="$(bashio::config 'static_delay_ms')"
+        if [[ $static_delay_ms == -* ]]; then
+            bashio::log.info "Running migrations for version 1.2.0"
+            new_static_delay_ms=${static_delay_ms#-}
+            bashio::log.info "Migrating static delay $static_delay_ms -> $new_static_delay_ms"
+            bashio::addon.option 'static_delay_ms' "$new_static_delay_ms"
+
+            echo "1.2.0" > /data/last_run_version
+            bashio::log.info 'Restarting...'
+            bashio::addon.restart
+        fi
+    fi
+fi
+
 
 bashio::log.info 'Starting sendspin daemon...'
+
+echo "$current_version" > /data/last_run_version
 
 # Player Name
 bashio::config.require 'player_name'
