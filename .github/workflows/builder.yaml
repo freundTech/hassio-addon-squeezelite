@@ -7,9 +7,11 @@ on:
   pull_request:
     branches:
       - main
+      - next
   push:
     branches:
       - main
+      - next
 
 permissions:
   contents: read
@@ -76,5 +78,5 @@ jobs:
     uses: ./.github/workflows/build-app.yaml
     with:
       app: ${{ matrix.app }}
-      publish: ${{ github.event_name == 'push' }}
+      publish: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
     secrets: inherit
